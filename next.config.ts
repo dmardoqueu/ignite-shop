@@ -1,17 +1,19 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
 
-const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 's3.amazonaws.com',
-        port: '',
-        pathname: '/my-bucket/**',
-        search: '',
-      },
+    domains: [
+      'files.stripe.com',
     ],
   },
-};
 
-export default nextConfig;
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
+  },
+}
+
+module.exports = nextConfig
