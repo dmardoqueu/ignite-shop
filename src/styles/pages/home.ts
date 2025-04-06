@@ -3,10 +3,11 @@ import { styled } from "..";
 
 export const HomeContainer = styled('main', {
     display: 'flex',
-    maxWidth: 'calc(100vw - ((100vw - 1180px) / 2))',
+    maxWidth: 'calc(100vw - ((100vw - 1280px) / 2))',
     marginLeft: 'auto',
+    marginRight: '2rem',
     width: '100%',
-    minHeight: 656
+    maxHeight: 700,
 })
 
 export const Product = styled(Link, {
